@@ -8,20 +8,40 @@
     </head>
     <body>
 
-        <header id="top-header">
-            <button>Links</button>
+        <header id="top-header-mobile">
+            <div><i>Hamburgarikon</i></div>
             <h1>Text</h1>
         </header>
 
-        <div id="wrapper-first-page">
+        <nav id="top-nav-desktop" class="common-shadow">
+            <a href="#wrapper-first-page">Förstasida</a>
+            <a href="#">Läsvärt</a>
+            <a href="#">Bilder</a>
+            <div class="dropdown">
+                <span>Länkar▼</span>
+                <ul class="dropdown-content common-shadow">
+                    <li><a href="#">Ett alternativ</a></li>
+                    <li><a href="#">Ett alternativ</a></li>
+                    <li><a href="#">Ett alternativ</a></li>
+                </ul>
+            </div>
+        </nav>
 
-            <h1>Första sida</h1>
-            <article id="about">
+        <div id="wrapper-first-page">
+            <div id="background-left-black"></div>
+
+            <header>
+                <h2>Andreas Hellquist</h2>
+                <h3>Person osv</h3>
+            </header>
+
+            <article id="about" class="larger-text rounded-corners common-shadow">
+                <h4>Rubrik</h4>
                 <p>Här finns lite snabb information om mig och sånt eller någonting. Jag är faktiskt inte helt säker på vad som ska stå här. Om du läser tillräckligt långt kommer du inse att det fortfarande inte står någonting vettigt här...</p>
             </article>
 
-            <section id="list">
-                <h3>Saker du kan hitta här</h3>
+            <section id="list" class="larger-text rounded-corners common-shadow">
+                <h4>Saker du kan hitta här</h4>
                 <ul>
                     <li>Sak</li>
                     <li>En till sak</li>

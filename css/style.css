@@ -1,59 +1,130 @@
+:root {
+    /* I'll just steal gruvbox for now (technically it isn't stealing since it's under MIT). I will make sure to give
+     * credit somewhere on the page */
+
+    /* I define a lot of colors here in case, but I will probably only use a few.
+     * The plan is to remove those I don't need in the end */
+    --gruvbox-dark0:       #282828;
+    --gruvbox-dark0_soft:  #32302f;
+    --gruvbox-dark1:       #3c3836;
+    --gruvbox-dark2:       #504945;
+    --gruvbox-dark3:       #665c54;
+    --gruvbox-dark4:       #7c6f64;
+    --gruvbox-dark4_256:   #7c6f64;
+
+    --gruvbox-gray_245:    #928374;
+    --gruvbox-gray_244:    #928374;
+
+    --gruvbox-light0_hard: #f9f5d7;
+    --gruvbox-light0:      #fbf1c7;
+    --gruvbox-light0_soft: #f2e5bc;
+    --gruvbox-light1:      #ebdbb2;
+    --gruvbox-light2:      #d5c4a1;
+    --gruvbox-light3:      #bdae93;
+    --gruvbox-light4:      #a89984;
+    --gruvbox-light4_256:  #a89984;
+
+    --gruvbox-bright_red:      #fb4934;
+    --gruvbox-bright_green:    #b8bb26;
+    --gruvbox-bright_yellow:   #fabd2f;
+    --gruvbox-bright_blue:     #83a598;
+    --gruvbox-bright_purple:   #d3869b;
+    --gruvbox-bright_aqua:     #8ec07c;
+    --gruvbox-bright_orange:   #fe8019;
+
+    --gruvbox-neutral_red:     #cc241d;
+    --gruvbox-neutral_green:   #98971a;
+    --gruvbox-neutral_yellow:  #d79921;
+    --gruvbox-neutral_blue:    #458588;
+    --gruvbox-neutral_purple:  #b16286;
+    --gruvbox-neutral_aqua:    #689d6a;
+    --gruvbox-neutral_orange:  #d65d0e;
+
+    --gruvbox-faded_red:       #9d0006;
+    --gruvbox-faded_green:     #79740e;
+    --gruvbox-faded_yellow:    #b57614;
+    --gruvbox-faded_blue:      #076678;
+    --gruvbox-faded_purple:    #8f3f71;
+    --gruvbox-faded_aqua:      #427b58;
+    --gruvbox-faded_orange:    #af3a03;
+
+    --background-color:     var(--gruvbox-dark0);
+    --top-nav-color:        var(--gruvbox-bright_green);
+    --text-on-bg-color:     var(--gruvbox-light0_soft);
+
+    /* --common-shadow-color: var(--gruvbox-dark2); */
+}
+
 body {
     margin: 0px;
+
+    background-color: var(--background-color);
 }
-
-/* Top header ------------------------ */
-header#top-header {
-    position:fixed;
-
-    background-color: lightblue;
-    width: 100%;
-    height: 10%;
-
-    display: flex;
-    justify-content: flex-left;
-}
-
-header#top-header h1 {
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    text-align: center;
-}
-
-/* End top header -------------------- */
 
 /* First page ------------------------ */
+
+div#wrapper-first-page article#about {
+    grid-area: ar;
+
+    color: var(--text-on-bg-color);
+}
+
+div#wrapper-first-page article#about h4 {
+    margin: 0;
+    padding: 0;
+}
 
 div#wrapper-first-page article#about p {
     grid-area: p;
 
-    padding: 0em 2em 0em 2em;
-}
-
-div#wrapper-first-page section#list h3 {
-    text-align: center;
-}
-
-div#wrapper-first-page section#list ul {
-    margin-left: 1em;
+    padding: 0;
+    padding-right: 1em;
+    margin-top: 0.5em;
 }
 
 div#wrapper-first-page section#list {
     grid-area: se;
 
-    background-color: lightgoldenrodyellow;
+    color: var(--text-on-bg-color);
+
+    margin-left: 2em;
 }
 
-div#wrapper-first-page article#about {
-    grid-area: ar;
+div#wrapper-first-page section#list h4 {
+    margin: 0;
+    padding: 0;
+}
 
-    background-color: lightgreen;
+div#wrapper-first-page section#list ul {
+    margin-top: 0.5em;
 }
 
 @media screen and (max-width: 767px) {
+    /* Top header ------------------------ */
+    header#top-header-mobile {
+        position:fixed;
+
+        background-color: lightblue;
+        width: 100%;
+        height: 10%;
+
+        display: flex;
+        justify-content: flex-left;
+    }
+
+    header#top-header-mobile h1 {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    nav#top-nav-desktop {
+        display: none;
+    }
+
     div#wrapper-first-page {
         display: grid;
         height: 100vh;
@@ -69,7 +140,7 @@ div#wrapper-first-page article#about {
         grid-template-rows: 10% 10% 30% 45% 5%;
     }
 
-    div#wrapper-first-page h1 {
+    div#wrapper-first-page h2 {
         grid-area: he;
 
         text-align: center;
@@ -78,9 +149,69 @@ div#wrapper-first-page article#about {
         margin: 0px;
         padding-top: 1em;
     }
+
+    .larger-text {
+        font-size: 1em;
+    }
+
+    .rounded-corners {
+        border-radius: 0px;
+    }
+
+    .common-shadow {
+        box-shadow: 0px;
+    }
 }
 
+/* Desktop */
 @media screen and (min-width: 1024px) {
+    nav#top-nav-desktop {
+        position:fixed;
+
+        background-color: var(--top-nav-color);
+
+        width: 100%;
+        height: 10%;
+
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    nav#top-nav-desktop a, nav#top-nav-desktop span {
+        text-decoration: none;
+        color: black;
+        font-size: 2em;
+
+    }
+
+    nav#top-nav-desktop .dropdown .dropdown-content {
+        margin-top: 0;
+
+        display: none;
+        position: absolute;
+        background-color: var(--top-nav-color);
+
+        list-style-type: none;
+        padding: 0;
+    }
+
+    nav#top-nav-desktop .dropdown .dropdown-content li {
+        padding: 1em;
+    }
+
+    nav#top-nav-desktop .dropdown .dropdown-content :hover {
+        background-color: lightgrey;
+    }
+
+    nav#top-nav-desktop .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    header#top-header-mobile {
+        display: none;
+    }
+
     div#wrapper-first-page {
         display: grid;
         height: 100vh;
@@ -92,20 +223,45 @@ div#wrapper-first-page article#about {
         '.  .  .  .'
         ;
 
-        grid-template-rows: 10% 20 50% 10%;
+        grid-template-rows: 10% 15% 65% 10%;
         grid-template-columns: 20% 30% 30% 20%;
 
         gap: 1em;
     }
 
-    div#wrapper-first-page h1 {
+    div#wrapper-first-page header {
         grid-area: he;
 
-        text-align: center;
-        background-color: lightslategray;
+        color: var(--text-on-bg-color);
 
+        font-family: sans-serif;
+        text-align: center;
+
+        font-size: 2em;
+
+        margin-top: 0.5em;
+    }
+
+    div#wrapper-first-page header h2 {
+        padding: 0px;
         margin: 0px;
-        padding-top: 1em;
+    }
+
+    div#wrapper-first-page header h3 {
+        padding: 0;
+        margin: 0;
+    }
+
+    .larger-text {
+        font-size: 200%;
+    }
+
+    .rounded-corners {
+        border-radius: 6px;
+    }
+
+    .common-shadow {
+        box-shadow: 1px 2px 4px var(--common-shadow-color);
     }
 }
 
