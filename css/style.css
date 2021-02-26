@@ -102,24 +102,27 @@ div#wrapper-first-page section#list ul {
 
 @media screen and (max-width: 767px) {
     /* Top header ------------------------ */
-    header#top-header-mobile {
+    nav#top-nav-mobile {
         position:fixed;
 
-        background-color: lightblue;
+        background-color: var(--top-nav-color);
         width: 100%;
         height: 10%;
-
-        display: flex;
-        justify-content: flex-left;
     }
 
-    header#top-header-mobile h1 {
+    /* Det här känns verkligen inte snyggt, men det får duga till vidare */
+    nav#top-nav-mobile a {
         position: absolute;
         margin-left: auto;
         margin-right: auto;
         left: 0;
         right: 0;
         text-align: center;
+
+        text-decoration: none;
+        color: black;
+        font-size: 2em;
+        font-weight: 600;
     }
 
     nav#top-nav-desktop {
@@ -210,7 +213,7 @@ div#wrapper-first-page section#list ul {
         display: block;
     }
 
-    header#top-header-mobile {
+    header#top-nav-mobile {
         display: none;
     }
 
