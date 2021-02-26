@@ -50,9 +50,10 @@
 
     --background-color:     var(--gruvbox-dark0);
     --top-nav-color:        var(--gruvbox-bright_green);
-    --text-on-bg-color:     var(--gruvbox-light0_soft);
+    --text-on-bg-color0:    var(--gruvbox-light0_soft);
+    --text-on-bg-color1:    var(--gruvbox-light2);
 
-    /* --common-shadow-color: var(--gruvbox-dark2); */
+    --common-shadow-color: var(--gruvbox-dark2);
 }
 
 body {
@@ -66,7 +67,7 @@ body {
 div#wrapper-first-page article#about {
     grid-area: ar;
 
-    color: var(--text-on-bg-color);
+    color: var(--text-on-bg-color0);
 }
 
 div#wrapper-first-page article#about h4 {
@@ -78,14 +79,14 @@ div#wrapper-first-page article#about p {
     grid-area: p;
 
     padding: 0;
-    padding-right: 1em;
+    padding-right: 2em;
     margin-top: 0.5em;
 }
 
 div#wrapper-first-page section#list {
     grid-area: se;
 
-    color: var(--text-on-bg-color);
+    color: var(--text-on-bg-color0);
 
     margin-left: 2em;
 }
@@ -232,37 +233,40 @@ div#wrapper-first-page section#list ul {
     div#wrapper-first-page header {
         grid-area: he;
 
-        color: var(--text-on-bg-color);
+        color: var(--text-on-bg-color0);
 
         font-family: sans-serif;
         text-align: center;
 
         font-size: 2em;
-
-        margin-top: 0.5em;
     }
 
     div#wrapper-first-page header h2 {
         padding: 0px;
-        margin: 0px;
+        margin-bottom: 5px;
     }
 
     div#wrapper-first-page header h3 {
         padding: 0;
         margin: 0;
+
+        font-size: 1em;
+        color: var(--text-on-bg-color1);
     }
 
     .larger-text {
         font-size: 200%;
     }
 
+    /* För närvarande inte använd */
     .rounded-corners {
         border-radius: 6px;
     }
 
-    .common-shadow {
+    .common-box-shadow {
         box-shadow: 1px 2px 4px var(--common-shadow-color);
     }
+
 }
 
 /* End first page -------------------- */
