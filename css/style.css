@@ -155,11 +155,12 @@ div#wrapper-first-page section#list ul {
         font-size: 1em;
     }
 
+    /* Not currently used */
     .rounded-corners {
         border-radius: 0px;
     }
 
-    .common-shadow {
+    .common-box-shadow {
         box-shadow: 0px;
     }
 }
