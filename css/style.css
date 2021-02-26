@@ -72,13 +72,12 @@ div#wrapper-first-page article#about {
     text-align: center;
 }
 
-div#wrapper-first-page article#about h4 {
+div#wrapper-first-page article#about h3 {
     margin: 0;
     padding: 0;
 }
 
 div#wrapper-first-page article#about p {
-    padding: 0;
     padding: 0 2em 0 2em;
     margin-top: 0.5em;
 }
@@ -91,7 +90,7 @@ div#wrapper-first-page section#list {
     text-align: center;
 }
 
-div#wrapper-first-page section#list h4 {
+div#wrapper-first-page section#list h3 {
     margin: 0;
     padding: 0;
 }
@@ -156,16 +155,21 @@ div#wrapper-first-page section#list ul {
         font-size: 1.5em;
     }
 
-    div#wrapper-first-page header h2 {
+    div#wrapper-first-page header h1 {
         padding: 0;
         margin: 0;
+        margin-bottom: 5px;
+
+        font-size: 1.5em;
 
         color: var(--text-on-bg-color0);
     }
 
-    div#wrapper-first-page header h3 {
+    div#wrapper-first-page header h2 {
         padding: 0;
         margin: 0;
+
+        font-size: 1em;
 
         color: var(--text-on-bg-color1);
     }
@@ -257,20 +261,22 @@ div#wrapper-first-page section#list ul {
 
         font-family: sans-serif;
         text-align: center;
+    }
 
-        font-size: 2em;
+    div#wrapper-first-page header h1 {
+        padding: 0px;
+        margin: 0;
+        margin-top: 1rem;
+        margin-bottom: 5px;
+
+        font-size: 3rem;
     }
 
     div#wrapper-first-page header h2 {
-        padding: 0px;
-        margin-bottom: 5px;
-    }
-
-    div#wrapper-first-page header h3 {
         padding: 0;
         margin: 0;
 
-        font-size: 1em;
+        font-size: 2rem;
         color: var(--text-on-bg-color1);
     }
 
