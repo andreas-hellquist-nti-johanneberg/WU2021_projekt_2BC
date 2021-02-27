@@ -66,37 +66,40 @@ body {
     background-color: var(--background-color1);
 }
 
+article.common-article {
+    color: var(--text-on-bg-color0);
+    text-align: center;
+}
+
+/* article.common-article h3 { */
+article.common-article h3 {
+    margin: 0;
+    padding: 0;
+}
+
+article.common-article p {
+    padding: 0 2em 0 2em;
+    margin-top: 0.5rem;
+}
+
+section.common-section {
+    color: var(--text-on-bg-color0);
+    text-align: center;
+}
+
+section.common-section h3 {
+    margin: 0;
+    padding: 0;
+}
+
 /* First page ------------------------ */
 
 div#wrapper-first-page article {
     grid-area: ar;
-
-    color: var(--text-on-bg-color0);
-
-    text-align: center;
-}
-
-div#wrapper-first-page article h3 {
-    margin: 0;
-    padding: 0;
-}
-
-div#wrapper-first-page article p {
-    padding: 0 2em 0 2em;
-    margin-top: 0.5em;
 }
 
 div#wrapper-first-page section {
     grid-area: se;
-
-    color: var(--text-on-bg-color0);
-
-    text-align: center;
-}
-
-div#wrapper-first-page section h3 {
-    margin: 0;
-    padding: 0;
 }
 
 div#wrapper-first-page section ul {
@@ -221,38 +224,35 @@ div.fade-layer.show {
 
     div#wrapper-first-page header {
         grid-area: he;
-        text-align: center;
-        font-family: sans-serif;
-        font-size: 1.5em;
     }
 
-    div#wrapper-first-page header h1 {
+    header.common-header {
+        text-align: center;
+        font-family: sans-serif;
+    }
+
+    header.common-header h1 {
         padding: 0;
         margin: 0;
         margin-bottom: 5px;
 
-        font-size: 1.5em;
+        font-size: 2.25rem;
 
         color: var(--text-on-bg-color0);
     }
 
-    div#wrapper-first-page header h2 {
+    header.common-header h2 {
         padding: 0;
         margin: 0;
 
-        font-size: 1em;
+        font-size: 1.5rem;
 
         color: var(--text-on-bg-color1);
-    }
-
-    .larger-text {
-        font-size: 1em;
     }
 
     .rounded-corners {
         border-radius: 6px;
     }
-
 }
 
 /* Desktop */
@@ -326,23 +326,25 @@ div.fade-layer.show {
 
     div#wrapper-first-page header {
         grid-area: he;
+    }
 
-        color: var(--text-on-bg-color0);
-
+    header.common-header {
         font-family: sans-serif;
         text-align: center;
     }
 
-    div#wrapper-first-page header h1 {
+    header.common-header h1 {
         padding: 0px;
         margin: 0;
         margin-top: 1rem;
         margin-bottom: 5px;
 
         font-size: 3rem;
+
+        color: var(--text-on-bg-color0);
     }
 
-    div#wrapper-first-page header h2 {
+    header.common-header h2 {
         padding: 0;
         margin: 0;
 
