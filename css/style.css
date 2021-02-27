@@ -91,67 +91,50 @@ section.common-section h3 {
     margin: 0;
     padding: 0;
 }
-
-/* First page ------------------------ */
-
-div#wrapper-first-page article {
-    grid-area: ar;
-}
-
-div#wrapper-first-page section {
-    grid-area: se;
-}
-
-div#wrapper-first-page section ul {
-    margin-top: 0.5em;
-    padding: 0;
-
-    list-style-type: none;
-}
-
 .common-box-shadow {
     box-shadow: 1px 2px 4px var(--common-shadow-color);
 }
 
-div.fade-layer {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 5;
-    display: none;
-
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-div.fade-layer.show {
-    display: block;
-}
-
+/* Mobile content common for all pages */
 @media screen and (max-width: 767px) {
-    /* Top header ------------------------ */
-    nav#top-nav-mobile {
-        position:fixed;
+    div.fade-layer {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 5;
+        display: none;
 
-        background-color: var(--top-nav-color);
-        width: 100%;
-        height: 10%;
+        background-color: rgba(0, 0, 0, 0.5);
     }
 
-    /* Det här känns verkligen inte snyggt, men det får duga till vidare */
-    nav#top-nav-mobile a {
-        position: absolute;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-        text-align: center;
+    div.fade-layer.show {
+        display: block;
+    }
 
-        text-decoration: none;
-        color: black;
-        font-size: 2em;
-        font-weight: 600;
+    header.common-header {
+        text-align: center;
+        font-family: sans-serif;
+    }
+
+    header.common-header h1 {
+        padding: 0;
+        margin: 0;
+        margin-bottom: 5px;
+
+        font-size: 2.25rem;
+
+        color: var(--text-on-bg-color0);
+    }
+
+    header.common-header h2 {
+        padding: 0;
+        margin: 0;
+
+        font-size: 1.5rem;
+
+        color: var(--text-on-bg-color1);
     }
 
     nav#mobile-hamburger-menu {
@@ -200,6 +183,94 @@ div.fade-layer.show {
         border: 2px solid;
         border-radius: 6px;
     }
+}
+
+/* Desktop content common to all pages */
+@media screen and (min-width: 1024px) {
+    nav#mobile-hamburger-menu {
+        display: none;
+    }
+
+    header.common-header {
+        font-family: sans-serif;
+        text-align: center;
+    }
+
+    header.common-header h1 {
+        padding: 0px;
+        margin: 0;
+        margin-top: 1rem;
+        margin-bottom: 5px;
+
+        font-size: 3rem;
+
+        color: var(--text-on-bg-color0);
+    }
+
+    header.common-header h2 {
+        padding: 0;
+        margin: 0;
+
+        font-size: 2rem;
+        color: var(--text-on-bg-color1);
+    }
+
+    .larger-text {
+        font-size: 200%;
+    }
+
+    /* För närvarande inte använd */
+    .rounded-corners {
+        border-radius: 6px;
+    }
+}
+
+/* First page ------------------------ */
+
+div#wrapper-first-page article {
+    grid-area: ar;
+}
+
+div#wrapper-first-page section {
+    grid-area: se;
+}
+
+div#wrapper-first-page section ul {
+    margin-top: 0.5em;
+    padding: 0;
+
+    list-style-type: none;
+}
+
+div#wrapper-first-page header {
+    grid-area: he;
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+    /* Top header ------------------------ */
+    nav#top-nav-mobile {
+        position:fixed;
+
+        background-color: var(--top-nav-color);
+        width: 100%;
+        height: 10%;
+    }
+
+    /* Det här känns verkligen inte snyggt, men det får duga till vidare */
+    nav#top-nav-mobile a {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+
+        text-decoration: none;
+        color: black;
+        font-size: 2em;
+        font-weight: 600;
+    }
 
     nav#top-nav-desktop {
         display: none;
@@ -220,34 +291,6 @@ div.fade-layer.show {
         grid-template-rows: 10% 15% 30% 30% 15%;
 
         gap: 1em;
-    }
-
-    div#wrapper-first-page header {
-        grid-area: he;
-    }
-
-    header.common-header {
-        text-align: center;
-        font-family: sans-serif;
-    }
-
-    header.common-header h1 {
-        padding: 0;
-        margin: 0;
-        margin-bottom: 5px;
-
-        font-size: 2.25rem;
-
-        color: var(--text-on-bg-color0);
-    }
-
-    header.common-header h2 {
-        padding: 0;
-        margin: 0;
-
-        font-size: 1.5rem;
-
-        color: var(--text-on-bg-color1);
     }
 
     .rounded-corners {
@@ -303,10 +346,6 @@ div.fade-layer.show {
         display: none;
     }
 
-    nav#mobile-hamburger-menu {
-        display: none;
-    }
-
     div#wrapper-first-page {
         display: grid;
         height: 100vh;
@@ -323,43 +362,61 @@ div.fade-layer.show {
 
         gap: 1em;
     }
+}
+/* End first page -------------------- */
 
-    div#wrapper-first-page header {
-        grid-area: he;
+/* Second page ----------------------- */
+
+div#wrapper-second-page header {
+    grid-area: he;
+}
+
+div#wrapper-second-page article {
+    grid-area: ar;
+}
+
+div#wrapper-second-page section {
+    grid-area: se;
+}
+
+div#wrapper-second-page section div#category-grid-wrapper span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid;
+
+    padding: 0;
+    margin: 0.5rem;
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+    div#wrapper-second-page {
+        display: grid;
+        height: 100vh;
+
+        grid-template-areas:
+        '.  '
+        'he'
+        'ar'
+        'se'
+        '.  '
+        ;
+
+        grid-template-rows: 10% 15% 30% 30% 15%;
+
+        gap: 1em;
     }
 
-    header.common-header {
-        font-family: sans-serif;
-        text-align: center;
-    }
+    div#wrapper-second-page section div#category-grid-wrapper {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
 
-    header.common-header h1 {
-        padding: 0px;
-        margin: 0;
-        margin-top: 1rem;
-        margin-bottom: 5px;
-
-        font-size: 3rem;
-
-        color: var(--text-on-bg-color0);
-    }
-
-    header.common-header h2 {
-        padding: 0;
-        margin: 0;
-
-        font-size: 2rem;
-        color: var(--text-on-bg-color1);
-    }
-
-    .larger-text {
-        font-size: 200%;
-    }
-
-    /* För närvarande inte använd */
-    .rounded-corners {
-        border-radius: 6px;
+        height: 85%;
     }
 }
 
-/* End first page -------------------- */
+
+/* End second page ------------------- */
