@@ -68,7 +68,7 @@ body {
 
 /* First page ------------------------ */
 
-div#wrapper-first-page article#about {
+div#wrapper-first-page article {
     grid-area: ar;
 
     color: var(--text-on-bg-color0);
@@ -76,17 +76,17 @@ div#wrapper-first-page article#about {
     text-align: center;
 }
 
-div#wrapper-first-page article#about h3 {
+div#wrapper-first-page article h3 {
     margin: 0;
     padding: 0;
 }
 
-div#wrapper-first-page article#about p {
+div#wrapper-first-page article p {
     padding: 0 2em 0 2em;
     margin-top: 0.5em;
 }
 
-div#wrapper-first-page section#list {
+div#wrapper-first-page section {
     grid-area: se;
 
     color: var(--text-on-bg-color0);
@@ -94,12 +94,12 @@ div#wrapper-first-page section#list {
     text-align: center;
 }
 
-div#wrapper-first-page section#list h3 {
+div#wrapper-first-page section h3 {
     margin: 0;
     padding: 0;
 }
 
-div#wrapper-first-page section#list ul {
+div#wrapper-first-page section ul {
     margin-top: 0.5em;
     padding: 0;
 
