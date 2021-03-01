@@ -418,5 +418,32 @@ div#wrapper-second-page section div#category-grid-wrapper span {
     }
 }
 
+/* Desktop */
+@media screen and (min-width: 1024px) {
 
+    div#wrapper-second-page {
+        display: grid;
+        height: 100vh;
+
+        grid-template-areas:
+        '.  .  .'
+        '.  he .'
+        '.  ar .'
+        '.  se .'
+        ;
+
+        grid-template-rows: 10% 10% 35% 35% 10%;
+        grid-template-columns: 20% 60% 20%;
+
+        gap: 1rem;
+    }
+
+    div#wrapper-second-page section div#category-grid-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        height: 70%;
+
+        margin: 0.5rem;
+    }
+}
 /* End second page ------------------- */
