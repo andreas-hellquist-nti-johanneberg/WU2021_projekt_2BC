@@ -48,12 +48,13 @@
     --gruvbox-faded_aqua:      #427b58;
     --gruvbox-faded_orange:    #af3a03;
 
-    --background-color1:     var(--gruvbox-dark0);
-    --background-color2:     var(--gruvbox-dark1);
+    --background-color1:    var(--gruvbox-dark0);
+    --background-color2:    var(--gruvbox-dark1);
     --top-nav-color:        var(--gruvbox-bright_green);
     --text-on-bg-color0:    var(--gruvbox-light0_soft);
-    --text-on-bg-color1:    var(--gruvbox-light2);
-    --text-on-bg-color2:    var(--gruvbox-light3);
+    --text-on-bg-color1:    var(--gruvbox-light1);
+    --text-on-bg-color2:    var(--gruvbox-light2);
+    --text-on-bg-color3:    var(--gruvbox-light3);
 
     --hamburger-menu-color: var(--gruvbox-neutral_blue);
 
@@ -95,6 +96,10 @@ section.common-section h3 {
     box-shadow: 1px 2px 4px var(--common-shadow-color);
 }
 
+.stop-scroll {
+    overflow: hidden;
+}
+
 /* Mobile content common for all pages */
 @media screen and (max-width: 767px) {
     div.fade-layer {
@@ -134,7 +139,7 @@ section.common-section h3 {
 
         font-size: 1.5rem;
 
-        color: var(--text-on-bg-color1);
+        color: var(--text-on-bg-color2);
     }
 
     nav#mobile-hamburger-menu {
@@ -175,8 +180,7 @@ section.common-section h3 {
         display: block;
 
         text-decoration: none;
-        color: var(--gruvbox-light1);
-        font-size: 2em;
+        color: var(--text-on-bg-color1);
         margin: 0.5rem 0 0.5rem 0;
 
         padding: 8px;
@@ -212,7 +216,7 @@ section.common-section h3 {
         margin: 0;
 
         font-size: 2rem;
-        color: var(--text-on-bg-color1);
+        color: var(--text-on-bg-color2);
     }
 
     .larger-text {
