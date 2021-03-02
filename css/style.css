@@ -451,3 +451,42 @@ div#wrapper-second-page section div#category-grid-wrapper span {
     }
 }
 /* End second page ------------------- */
+
+/* Third page ------------------------ */
+
+div#wrapper-third-page header {
+    grid-area: he;
+}
+
+div#wrapper-third-page article {
+    grid-area: ar;
+}
+
+div#wrapper-third-page section {
+    grid-area: se;
+}
+
+div#wrapper-third-page footer {
+    grid-area: fo;
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+    div#wrapper-third-page {
+        display: grid;
+        height: 100vh;
+
+        grid-template-areas:
+        '. '
+        'he'
+        'se'
+        'ar'
+        'fo'
+        ;
+
+        /* Auto här gör att jag kan använda gap utan overflow */
+        grid-template-rows: 10% 10% 30% 20% auto;
+        gap: 1rem;
+    }
+}
+/* End third page -------------------- */
