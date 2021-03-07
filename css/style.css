@@ -468,12 +468,6 @@ div#wrapper-third-page article {
 
 div#wrapper-third-page section {
     grid-area: se;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    overflow-x: scroll;
-    overflow-y: hidden;
 }
 
 div#wrapper-third-page section img {
@@ -505,6 +499,46 @@ div#wrapper-third-page footer {
         /* Auto här gör att jag kan använda gap utan overflow */
         grid-template-rows: 10% 5% 30% 25% auto;
         gap: 1rem;
+    }
+
+    div#wrapper-third-page section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+    div#wrapper-third-page {
+        display: grid;
+        height: 100vh;
+        grid-template-areas:
+        '.  .  .  . '
+        '.  he he . '
+        '.  se ar . '
+        '.  .  .  . '
+        'fo fo fo fo'
+        ;
+
+        grid-template-rows: 10% 15% 40% 15% auto;
+        grid-template-columns: 20% 30% 30% 20%;
+
+        gap: 1rem;
+
+        overflow: hidden;
+    }
+
+    div#wrapper-third-page section {
+        display: grid;
+        grid-template-rows: repeat(2, 50%);
+        grid-template-columns: repeat(2, 50%); 
+    }
+
+    div#wrapper-third-page section img {
+        width: 100%;
     }
 }
 /* End third page -------------------- */
