@@ -56,6 +56,8 @@
     --text-on-bg-color2:    var(--gruvbox-light2);
     --text-on-bg-color3:    var(--gruvbox-light3);
 
+    --image-border-color: var(--gruvbox-light3);
+
     --hamburger-menu-color: var(--gruvbox-neutral_blue);
 
     --common-shadow-color: var(--gruvbox-dark2);
@@ -69,26 +71,28 @@ body {
 
 article.common-article {
     color: var(--text-on-bg-color0);
-    text-align: center;
+    font-family: sans-serif;
 }
 
 /* article.common-article h3 { */
 article.common-article h3 {
+    text-align: center;
     margin: 0;
     padding: 0;
 }
 
 article.common-article p {
-    padding: 0 2em 0 2em;
+    padding: 0 2rem 0 2rem;
     margin-top: 0.5rem;
 }
 
 section.common-section {
     color: var(--text-on-bg-color0);
-    text-align: center;
+    font-family: sans-serif;
 }
 
 section.common-section h3 {
+    text-align: center;
     margin: 0;
     padding: 0;
 }
@@ -128,7 +132,7 @@ section.common-section h3 {
         margin: 0;
         margin-bottom: 5px;
 
-        font-size: 2.25rem;
+        font-size: 2rem;
 
         color: var(--text-on-bg-color0);
     }
@@ -240,9 +244,7 @@ div#wrapper-first-page section {
 }
 
 div#wrapper-first-page section ul {
-    margin-top: 0.5em;
-    padding: 0;
-
+    margin-top: 0.5rem;
     list-style-type: none;
 }
 
@@ -361,10 +363,10 @@ div#wrapper-first-page header {
         '.  .  .  .'
         ;
 
-        grid-template-rows: 10% 15% 65% 10%;
+        grid-template-rows: 10% 15% 65% auto;
         grid-template-columns: 20% 30% 30% 20%;
 
-        gap: 1em;
+        gap: 1rem;
     }
 }
 /* End first page -------------------- */
@@ -388,9 +390,11 @@ div#wrapper-second-page section div#category-grid-wrapper span {
     justify-content: center;
     align-items: center;
 
+    text-align: center;
+
     border: 2px solid;
 
-    padding: 0;
+    padding: 1rem;
     margin: 0.5rem;
 }
 
@@ -464,10 +468,24 @@ div#wrapper-third-page article {
 
 div#wrapper-third-page section {
     grid-area: se;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+div#wrapper-third-page section img {
+    height: 99%;
+    border: 3px solid var(--image-border-color);
 }
 
 div#wrapper-third-page footer {
     grid-area: fo;
+
+    background-color: var(--top-nav-color);
+    padding: 0 1rem 0 1rem;
 }
 
 /* Mobile */
@@ -485,7 +503,7 @@ div#wrapper-third-page footer {
         ;
 
         /* Auto här gör att jag kan använda gap utan overflow */
-        grid-template-rows: 10% 10% 30% 20% auto;
+        grid-template-rows: 10% 5% 30% 25% auto;
         gap: 1rem;
     }
 }
