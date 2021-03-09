@@ -533,6 +533,8 @@ div#wrapper-third-page footer {
 
     div#wrapper-third-page section {
         display: grid;
+        height: 100%;
+        width: 100%;
         grid-template-rows: repeat(2, 50%);
         grid-template-columns: repeat(2, 50%); 
     }
