@@ -14,23 +14,25 @@
     </head>
     <body>
 
+        <!-- Hela den här överdelen bryter så extremt mycket mot DRY att jag vet inte vad. Men å andra sidan vet jag inte
+            hur man ska göra det annars-->
         <nav id="top-nav-mobile" class="common-box-shadow">
             <div id="hamburger-menu-button"><i>Hamburgarikon</i></div>
-            <a href="#wrapper-first-page">Framsida</a>
+            <a href="#wrapper-front-first-page">Framsida</a>
         </nav>
 
         <nav id="mobile-hamburger-menu">
             <section id="navigate-page" class="rounded-corners common-box-shadow">
                 <h2>Hitta på sidan</h2>
-                <a href="#wrapper-first-page">Förstasida</a>
-                <a href="#wrapper-second-page">Läsvärt</a>
-                <a href="#wrapper-third-page">Bilder</a>
+                <a href="#wrapper-front-first-page">Förstasida</a>
+                <a href="#wrapper-front-second-page">Läsvärt</a>
+                <a href="#wrapper-front-third-page">Bilder</a>
             </section>
 
             <section id="pages" class="rounded-corners common-box-shadow">
                 <h2>Länkar</h2>
-                <a href="#">Ett alternativ</a>
-                <a href="#">Ett alternativ</a>
+                <a href="index.html">Framsida</a>
+                <a href="art-gallery.html">Art gallery</a>
                 <a href="#">Ett alternativ</a>
             </section>
         </nav>
@@ -38,20 +40,20 @@
         <div class="fade-layer"></div>
 
         <nav id="top-nav-desktop" class="common-box-shadow">
-            <a href="#wrapper-first-page">Förstasida</a>
-            <a href="#wrapper-second-page">Läsvärt</a>
-            <a href="#wrapper-third-page">Bilder</a>
+            <a href="#wrapper-front-first-page">Förstasida</a>
+            <a href="#wrapper-front-second-page">Läsvärt</a>
+            <a href="#wrapper-front-third-page">Bilder</a>
             <div class="dropdown">
                 <span>Länkar▼</span>
                 <ul class="dropdown-content common-shadow">
-                    <li><a href="#">Ett alternativ</a></li>
-                    <li><a href="#">Ett alternativ</a></li>
+                    <li><a href="index.html">Framsida</a></li>
+                    <li><a href="art-gallery.html">Art gallery</a></li>
                     <li><a href="#">Ett alternativ</a></li>
                 </ul>
             </div>
         </nav>
 
-        <div id="wrapper-first-page">
+        <div id="wrapper-front-first-page">
             <header class="common-header">
                 <h1>Andreas Hellquist</h1>
                 <h2>Person osv</h2>
@@ -73,7 +75,7 @@
             </section>
         </div>
 
-        <div id="wrapper-second-page">
+        <div id="wrapper-front-second-page">
             <!-- Oklart om jag kan ha flera <header> och <h1> på samma sida. Jag bör nog fråga Emil -->
             <header class="common-header">
                 <h1>Läsvärt</h1>
@@ -95,7 +97,7 @@
             </section>
         </div>
 
-        <div id="wrapper-third-page">
+        <div id="wrapper-front-third-page">
             <header class="common-header">
                 <h1>Bilder</h1>
             </header>

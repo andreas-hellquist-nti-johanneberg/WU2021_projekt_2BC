@@ -235,20 +235,20 @@ section.common-section h3 {
 
 /* First page ------------------------ */
 
-div#wrapper-first-page article {
+div#wrapper-front-first-page article {
     grid-area: ar;
 }
 
-div#wrapper-first-page section {
+div#wrapper-front-first-page section {
     grid-area: se;
 }
 
-div#wrapper-first-page section ul {
+div#wrapper-front-first-page section ul {
     margin-top: 0.5rem;
     list-style-type: none;
 }
 
-div#wrapper-first-page header {
+div#wrapper-front-first-page header {
     grid-area: he;
 }
 
@@ -282,7 +282,7 @@ div#wrapper-first-page header {
         display: none;
     }
 
-    div#wrapper-first-page {
+    div#wrapper-front-first-page {
         display: grid;
         height: 100vh;
 
@@ -352,7 +352,7 @@ div#wrapper-first-page header {
         display: none;
     }
 
-    div#wrapper-first-page {
+    div#wrapper-front-first-page {
         display: grid;
         height: 100vh;
 
@@ -373,19 +373,19 @@ div#wrapper-first-page header {
 
 /* Second page ----------------------- */
 
-div#wrapper-second-page header {
+div#wrapper-front-second-page header {
     grid-area: he;
 }
 
-div#wrapper-second-page article {
+div#wrapper-front-second-page article {
     grid-area: ar;
 }
 
-div#wrapper-second-page section {
+div#wrapper-front-second-page section {
     grid-area: se;
 }
 
-div#wrapper-second-page section div#category-grid-wrapper span {
+div#wrapper-front-second-page section div#category-grid-wrapper span {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -400,7 +400,7 @@ div#wrapper-second-page section div#category-grid-wrapper span {
 
 /* Mobile */
 @media screen and (max-width: 767px) {
-    div#wrapper-second-page {
+    div#wrapper-front-second-page {
         display: grid;
         height: 100vh;
 
@@ -417,7 +417,7 @@ div#wrapper-second-page section div#category-grid-wrapper span {
         gap: 1em;
     }
 
-    div#wrapper-second-page section div#category-grid-wrapper {
+    div#wrapper-front-second-page section div#category-grid-wrapper {
         display: grid;
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
@@ -429,7 +429,7 @@ div#wrapper-second-page section div#category-grid-wrapper span {
 /* Desktop */
 @media screen and (min-width: 1024px) {
 
-    div#wrapper-second-page {
+    div#wrapper-front-second-page {
         display: grid;
         height: 100vh;
 
@@ -446,7 +446,7 @@ div#wrapper-second-page section div#category-grid-wrapper span {
         gap: 1rem;
     }
 
-    div#wrapper-second-page section div#category-grid-wrapper {
+    div#wrapper-front-second-page section div#category-grid-wrapper {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         height: 70%;
@@ -458,24 +458,24 @@ div#wrapper-second-page section div#category-grid-wrapper span {
 
 /* Third page ------------------------ */
 
-div#wrapper-third-page header {
+div#wrapper-front-third-page header {
     grid-area: he;
 }
 
-div#wrapper-third-page article {
+div#wrapper-front-third-page article {
     grid-area: ar;
 }
 
-div#wrapper-third-page section {
+div#wrapper-front-third-page section {
     grid-area: se;
 }
 
-div#wrapper-third-page section img {
+div#wrapper-front-third-page section img {
     height: 99%;
     border: 3px solid var(--image-border-color);
 }
 
-div#wrapper-third-page footer {
+div#wrapper-front-third-page footer {
     grid-area: fo;
 
     background-color: var(--top-nav-color);
@@ -484,7 +484,7 @@ div#wrapper-third-page footer {
 
 /* Mobile */
 @media screen and (max-width: 767px) {
-    div#wrapper-third-page {
+    div#wrapper-front-third-page {
         display: grid;
         height: 100vh;
 
@@ -501,7 +501,7 @@ div#wrapper-third-page footer {
         gap: 1rem;
     }
 
-    div#wrapper-third-page section {
+    div#wrapper-front-third-page section {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -512,7 +512,7 @@ div#wrapper-third-page footer {
 
 /* Desktop */
 @media screen and (min-width: 1024px) {
-    div#wrapper-third-page {
+    div#wrapper-front-third-page {
         display: grid;
         height: 100vh;
         grid-template-areas:
@@ -531,7 +531,7 @@ div#wrapper-third-page footer {
         overflow: hidden;
     }
 
-    div#wrapper-third-page section {
+    div#wrapper-front-third-page section {
         display: grid;
         height: 100%;
         width: 100%;
