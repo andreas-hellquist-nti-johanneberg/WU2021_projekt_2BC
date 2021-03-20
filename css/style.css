@@ -568,6 +568,10 @@ section#wrapper-art-gallery-images section.art-container figure img {
     max-height: auto;
 }
 
+div#wrapper-art-gallery section#wrapper-art-gallery-images {
+    grid-area: im;
+}
+
 /* Mobile */
 @media screen and (max-width: 767px) {
     div#wrapper-art-gallery {
@@ -608,24 +612,58 @@ section#wrapper-art-gallery-images section.art-container figure img {
     div#wrapper-art-gallery {
         display: grid;
         grid-template-areas:
-        '.  .  .  . '
-        '.  he he . '
+        '.  .  .  .  . '
+        'na .  he he . '
+        'na .  im im . '
         ;
 
-        height: 25vh;
-        grid-template-rows: 10vh 15vh;
-        grid-template-columns: 20% 30% 30% 20%;
+        height: 100vh;
+        grid-template-rows: 10% 15% auto;
+        grid-template-columns: 20% 5% 35% 35% 5%;
     }
 
-    div#wrapper-art-gallery-images {
+    div#wrapper-art-gallery section#wrapper-art-gallery-images {
         display: grid;
         gap: 1rem;
 
         grid-auto-rows: auto;
         grid-auto-columns: auto;
 
+        grid-template-columns: 50% 50%;
+
         padding: 1rem;
-        overflow: scroll;
+    }
+
+    div#wrapper-art-gallery nav#desktop-image-navigation {
+        grid-area: na;
+
+        background-color: var(--hamburger-menu-color);
+    }
+
+    nav#desktop-image-navigation section {
+        background-color: var(--background-color2);
+        color: var(--text-on-bg-color0);
+
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    nav#desktop-image-navigation section h2 {
+        padding-bottom: 3px;
+        border-bottom: 3px solid;
+        margin: 0.5rem 0 0.5rem 0;
+    }
+
+    nav#desktop-image-navigation section a {
+        display: block;
+
+        text-decoration: none;
+        color: var(--text-on-bg-color1);
+        margin: 0.5rem 0 0.5rem 0;
+
+        padding: 8px;
+        border: 2px solid;
+        border-radius: 6px;
     }
 }
 
