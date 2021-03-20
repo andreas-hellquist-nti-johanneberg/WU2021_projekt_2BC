@@ -548,24 +548,73 @@ div#wrapper-front-third-page footer {
 /* End third page -------------------- */
 
 /* Art gallery ----------------------- */
-div#wrapper-art-gallery-top header {
+div#wrapper-art-gallery header {
     grid-area: he;
+}
+
+section#wrapper-art-gallery-images section.art-container {
+    background-color: var(--text-on-bg-color2);
+    font-family: sans-serif;
+}
+
+section#wrapper-art-gallery-images section.art-container h2 {
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 6px;
+}
+
+section#wrapper-art-gallery-images section.art-container figure img {
+    max-width: 100%;
+    max-height: auto;
 }
 
 /* Mobile */
 @media screen and (max-width: 767px) {
-    div#wrapper-art-gallery-top {
+    div#wrapper-art-gallery {
         display: grid;
+
         grid-template-areas:
         '. '
         'he'
+        'im'
         ;
 
-        height: 15vh;
-        grid-template-rows: 10vh 5vh;
+        height: 100vh;
+        grid-template-rows: 10% 5% 85%;
         gap: 1rem;
 
-        padding-bottom: 2rem;
+        overflow: scroll;
+        margin-bottom: 1rem;
+    }
+
+    div#wrapper-art-gallery section#wrapper-art-gallery-images {
+        grid-area: im;
+
+        display: grid;
+        gap: 1rem;
+
+        grid-auto-rows: auto;
+        grid-auto-columns: auto;
+        padding: 1rem;
+    }
+
+    nav#desktop-image-navigation {
+        display: none;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+    div#wrapper-art-gallery {
+        display: grid;
+        grid-template-areas:
+        '.  .  .  . '
+        '.  he he . '
+        ;
+
+        height: 25vh;
+        grid-template-rows: 10vh 15vh;
+        grid-template-columns: 20% 30% 30% 20%;
     }
 
     div#wrapper-art-gallery-images {
@@ -574,24 +623,10 @@ div#wrapper-art-gallery-top header {
 
         grid-auto-rows: auto;
         grid-auto-columns: auto;
+
         padding: 1rem;
         overflow: scroll;
     }
-
-    div#wrapper-art-gallery-images section.art-container {
-        background-color: var(--text-on-bg-color2);
-        font-family: sans-serif;
-    }
-
-    div#wrapper-art-gallery-images section.art-container h2 {
-        text-align: center;
-        padding: 0.5rem;
-        border-radius: 6px;
-    }
-
-    div#wrapper-art-gallery-images section.art-container figure img {
-        max-width: 100%;
-        max-height: auto;
-    }
 }
+
 /* End art gallery ------------------- */

@@ -19,7 +19,7 @@
                    omdesign vilket jag inte riktigt har tid med-->
         <nav id="mobile-hamburger-menu">
             <section id="navigate-page" class="rounded-corners common-box-shadow">
-                <h2>Hitta på sidan</h2>
+                <h2>Hitta bild</h2>
                 <a href="#">Jag tar inte bort detta än eftersom jag kanske kommer navigera mellan bildtitlar</a>
             </section>
 
@@ -45,27 +45,47 @@
             </div>
         </nav>
 
-        <div id="wrapper-art-gallery-top">
+        <nav id="desktop-image-navigation" class="common-box-shadow">
+            <section id="image-links">
+                <!-- This is filled with links to the images with javascript -->
+            </section>
+        </nav>
+
+        <div id="wrapper-art-gallery">
+
             <header class="common-header">
                 <h1>Titel osv</h1>
             </header>
-        </div>
 
-        <div id="wrapper-art-gallery-images">
+            <section id="wrapper-art-gallery-images">
 
-            <!-- Each of these is an artwork on display -->
-            <section class="art-container rounded-corners common-box-shadow">
-                <h2>Dinosaurie</h2>
-                <figure>
-                    <img src="img/drawn/Dinosaurie.png" alt="Dinosaurie">
-                    <figcaption>
-                        <p>En dinosurie tror jag. Lite oklart dock.</p>
-                        <p>Date: Unknown</p>
-                    </figcaption>
-                </figure>
+                <!-- Each of these is an artwork on display -->
+                <section class="art-container rounded-corners common-box-shadow">
+                    <h2>Dinosaurie</h2>
+                    <figure>
+                        <img src="img/drawn/Dinosaurie.png" alt="Dinosaurie">
+                        <figcaption>
+                            <p>En dinosurie tror jag. Lite oklart dock.</p>
+                            <p>Date: Unknown</p>
+                        </figcaption>
+                    </figure>
+                </section>
+
+                <section class="art-container rounded-corners common-box-shadow">
+                    <h2>Michael</h2>
+                    <figure>
+                        <img src="img/drawn/Michael.png" alt="Michael">
+                        <figcaption>
+                            <p>En person som heter Michael.</p>
+                            <p>Date: Unknown</p>
+                        </figcaption>
+                    </figure>
+                </section>
+
             </section>
 
         </div>
+
 
         <script src="js/frontpage-hamburger-menu.js"></script>
     </body>
