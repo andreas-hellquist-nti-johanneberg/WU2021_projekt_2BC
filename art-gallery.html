@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <title>Art gallery</title>
+    </head>
+    <body>
+        <!-- TODO: Fundera på byta färger i naven på de olika sidorna -->
+        <nav id="top-nav-mobile" class="common-box-shadow">
+            <div id="hamburger-menu-button"><i>Hamburgarikon</i></div>
+            <a href="#wrapper-first-page">Art gallery</a>
+        </nav>
+
+        <!-- TODO: Det vore coolt att automatiskt indexera bilderna efter namn så att man kan scrolla till dem i hamburgermenyn.
+                   Jag tror jag vet hur man kan göra det med javascript, men det får komma sedan i mån av tid.
+                   I så fall skulle jag även behöva lägga in motsvarande meny på desktop vilket skullel kräva en del
+                   omdesign vilket jag inte riktigt har tid med-->
+        <nav id="mobile-hamburger-menu">
+            <section id="navigate-page" class="rounded-corners common-box-shadow">
+                <h2>Hitta på sidan</h2>
+                <a href="#">Jag tar inte bort detta än eftersom jag kanske kommer navigera mellan bildtitlar</a>
+            </section>
+
+            <section id="pages" class="rounded-corners common-box-shadow">
+                <h2>Länkar</h2>
+                <a href="index.html">Framsida</a>
+                <a href="art-gallery.html">Art gallery</a>
+                <a href="#">Ett alternativ</a>
+            </section>
+        </nav>
+
+        <div class="fade-layer"></div>
+
+        <nav id="top-nav-desktop" class="common-box-shadow">
+            <a href="#wrapper-first-page">Art gallery</a>
+            <div class="dropdown">
+                <span>Länkar▼</span>
+                <ul class="dropdown-content common-shadow">
+                    <li><a href="index.html">Framsida</a></li>
+                    <li><a href="art-gallery.html">Art gallery</a></li>
+                    <li><a href="#">Ett alternativ</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="wrapper-art-gallery-top">
+            <header class="common-header">
+                <h1>Titel osv</h1>
+            </header>
+        </div>
+
+        <div id="wrapper-art-gallery-images">
+
+            <!-- Each of these is an artwork on display -->
+            <section class="art-container rounded-corners common-box-shadow">
+                <h2>Dinosaurie</h2>
+                <figure>
+                    <img src="img/drawn/Dinosaurie.png" alt="Dinosaurie">
+                    <figcaption>
+                        <p>En dinosurie tror jag. Lite oklart dock.</p>
+                        <p>Date: Unknown</p>
+                    </figcaption>
+                </figure>
+            </section>
+
+        </div>
+
+        <script src="js/frontpage-hamburger-menu.js"></script>
+    </body>
+</html>
