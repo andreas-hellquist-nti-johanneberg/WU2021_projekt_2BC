@@ -172,6 +172,8 @@ section.common-section h3 {
         background-color: var(--background-color2);
         color: var(--text-on-bg-color0);
 
+        font-family: sans-serif;
+
         padding: 1rem;
         margin: 1rem;
     }
@@ -613,7 +615,7 @@ div#wrapper-art-gallery section#wrapper-art-gallery-images {
         display: grid;
         grid-template-areas:
         '.  .  .  .  . '
-        'na .  he he . '
+        'na he he he . '
         'na .  im im . '
         ;
 
@@ -634,6 +636,11 @@ div#wrapper-art-gallery section#wrapper-art-gallery-images {
         padding: 1rem;
     }
 
+    /* TODO:
+     *
+     * Eftersom det här är mer eller mindre copy paste från hamburgermenyn kan jag flytta mycket av det
+     * till en class och på det viset behålla det på ett ställe
+    */
     div#wrapper-art-gallery nav#desktop-image-navigation {
         grid-area: na;
 
@@ -643,6 +650,8 @@ div#wrapper-art-gallery section#wrapper-art-gallery-images {
     nav#desktop-image-navigation section {
         background-color: var(--background-color2);
         color: var(--text-on-bg-color0);
+
+        font-family: sans-serif;
 
         padding: 1rem;
         margin: 1rem;
