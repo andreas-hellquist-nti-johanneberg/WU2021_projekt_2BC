@@ -60,7 +60,7 @@
     --image-border-color:    var(--gruvbox-light3);
     --image-container-color: var(--gruvbox-light2);
 
-    --hamburger-menu-color: var(--gruvbox-neutral_blue);
+    --nav-menu-color: var(--gruvbox-neutral_blue);
 
     --common-shadow-color: var(--gruvbox-dark2);
 }
@@ -104,6 +104,39 @@ section.common-section h3 {
 
 .stop-scroll {
     overflow: hidden;
+}
+
+/* Navigation menu is used for hamburger menu on mobile and eventual desktop menus */
+.navigation-menu {
+    background-color: var(--nav-menu-color);
+}
+
+.navigation-menu section {
+    background-color: var(--background-color2);
+    color: var(--text-on-bg-color0);
+
+    font-family: sans-serif;
+
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.navigation-menu section h2 {
+    padding-bottom: 3px;
+    border-bottom: 3px solid;
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+.navigation-menu section a {
+    display: block;
+
+    text-decoration: none;
+    color: var(--text-on-bg-color1);
+    margin: 0.5rem 0 0.5rem 0;
+
+    padding: 8px;
+    border: 2px solid;
+    border-radius: 6px;
 }
 
 /* Mobile content common for all pages */
@@ -150,14 +183,13 @@ section.common-section h3 {
 
     nav#mobile-hamburger-menu {
         position: fixed;
-        left: -80%;
+        left: -85%;
         z-index: 10;
         transition-property: left;
         transition-duration: 0.6s;
 
         height: 100vh;
         width: 80vw;
-        background-color: var(--hamburger-menu-color);
 
     }
 
@@ -166,34 +198,6 @@ section.common-section h3 {
         left: 0;
         transition-property: left;
         transition-duration: 0.6s;
-    }
-
-    nav#mobile-hamburger-menu section {
-        background-color: var(--background-color2);
-        color: var(--text-on-bg-color0);
-
-        font-family: sans-serif;
-
-        padding: 1rem;
-        margin: 1rem;
-    }
-
-    nav#mobile-hamburger-menu section h2 {
-        padding-bottom: 3px;
-        border-bottom: 3px solid;
-        margin: 0.5rem 0 0.5rem 0;
-    }
-
-    nav#mobile-hamburger-menu section a {
-        display: block;
-
-        text-decoration: none;
-        color: var(--text-on-bg-color1);
-        margin: 0.5rem 0 0.5rem 0;
-
-        padding: 8px;
-        border: 2px solid;
-        border-radius: 6px;
     }
 }
 
@@ -636,44 +640,99 @@ div#wrapper-art-gallery section#wrapper-art-gallery-images {
         padding: 1rem;
     }
 
-    /* TODO:
-     *
-     * Eftersom det här är mer eller mindre copy paste från hamburgermenyn kan jag flytta mycket av det
-     * till en class och på det viset behålla det på ett ställe
-    */
     div#wrapper-art-gallery nav#desktop-image-navigation {
         grid-area: na;
-
-        background-color: var(--hamburger-menu-color);
-    }
-
-    nav#desktop-image-navigation section {
-        background-color: var(--background-color2);
-        color: var(--text-on-bg-color0);
-
-        font-family: sans-serif;
-
-        padding: 1rem;
-        margin: 1rem;
-    }
-
-    nav#desktop-image-navigation section h2 {
-        padding-bottom: 3px;
-        border-bottom: 3px solid;
-        margin: 0.5rem 0 0.5rem 0;
-    }
-
-    nav#desktop-image-navigation section a {
-        display: block;
-
-        text-decoration: none;
-        color: var(--text-on-bg-color1);
-        margin: 0.5rem 0 0.5rem 0;
-
-        padding: 8px;
-        border: 2px solid;
-        border-radius: 6px;
     }
 }
 
 /* End art gallery ------------------- */
+
+/* Start about ----------------------- */
+
+div#wrapper-about header {
+    grid-area: he;
+}
+
+div#wrapper-about p {
+    grid-area: p;
+
+    color: var(--text-on-bg-color0);
+    font-family: sans-serif;
+    padding: 0 1rem 0 1rem;
+}
+
+div#wrapper-about section.questions {
+    grid-area: qu;
+    color: var(--text-on-bg-color0);
+    font-family: sans-serif;
+    padding-left: 1rem;
+}
+
+div#wrapper-about section.questions h2 {
+    text-align: center;
+}
+
+div#wrapper-about section .collapsible > :first-child::before {
+    content: "▶ ";
+}
+
+div#wrapper-about section .collapsible.opened > :first-child::before {
+    content: "▼ ";
+}
+
+div#wrapper-about section .collapsible :not(:first-child) {
+    display: none;
+}
+
+div#wrapper-about section .collapsible.opened :not(:first-child) {
+    display: block;
+    padding-left: 2rem;
+}
+
+/* Mobile */
+@media screen and (max-width: 767px) {
+    div#wrapper-about {
+        display: grid;
+
+        grid-template-areas: 
+        '. '
+        'he'
+        'p '
+        'qu'
+        ;
+
+        height: 100vh;
+        grid-template-rows: 10% 5% 20% auto;
+        gap: 1rem;
+
+        overflow: scroll;
+        margin-bottom: 1rem;
+    }
+
+    div#wrapper-about nav#desktop-question-navigation {
+        display: none;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+    div#wrapper-about {
+        display: grid;
+        grid-template-areas:
+        '.  . .  . '
+        'na . he . '
+        'na . p  . '
+        'na . qu . '
+        ;
+
+        height: 100vh;
+        grid-template-rows: 10% 15% 20% auto;
+        grid-template-columns: 20% 5% auto 5%;
+    }
+
+    div#wrapper-about nav#desktop-question-navigation {
+        grid-area: na;
+    }
+}
+
+/* End about ------------------------- */

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Om osv</title>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+    </head>
+    <body>
+
+        <nav id="top-nav-mobile" class="common-box-shadow">
+            <div id="hamburger-menu-button"><i>Hamburgarikon</i></div>
+            <a href="#wrapper-about">Om osv</a>
+        </nav>
+
+        <nav id="mobile-hamburger-menu" class="navigation-menu">
+            <section id="navigate-page-mobile" class="rounded-corners common-box-shadow">
+                <h2>Hitta fråga</h2>
+            </section>
+
+            <section id="pages" class="rounded-corners common-box-shadow">
+                <h2>Länkar</h2>
+                <a href="index.html">Framsida</a>
+                <a href="art-gallery.html">Art gallery</a>
+                <a href="about.html">Om osv</a>
+            </section>
+        </nav>
+
+        <div class="fade-layer"></div>
+
+        <nav id="top-nav-desktop" class="common-box-shadow">
+            <a href="#wrapper-about">Om osv</a>
+            <div class="dropdown">
+                <span>Länkar▼</span>
+                <ul class="dropdown-content common-shadow">
+                    <li><a href="index.html">Framsida</a></li>
+                    <li><a href="art-gallery.html">Art gallery</a></li>
+                    <li><a href="about.html">Om osv</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="wrapper-about">
+
+            <nav id="desktop-question-navigation" class="navigation-menu common-box-shadow larger-text">
+                <section id="navigate-page-desktop" class="rounded-corners common-box-shadow">
+                    <h2>Hitta fråga</h2>
+                    <!-- This is filled with links to the questions with javascript -->
+                </section>
+            </nav>
+
+            <header class="common-header">
+                <h1>Om sidan osv</h1>
+            </header>
+
+            <p class="larger-text">Här finns lite samlad information om sidan och mig i frågeform. Klicka på en fråga för att läsa svaret osv.</p>
+
+            <section class="questions larger-text">
+                <h2>Frågor</h2>
+
+                <!-- Each of these is a collapsible question block -->
+                <div class="collapsible">
+                    <h3>Varför finns den här sidan</h3>
+                    <p>Dels för att jag hade en webutvecklingsuppgift som krävde att jag gjorde en sida, men främst för att jag gillar tanken på att någon skulle googla mitt namn och stöta på det här.</p>
+                </div>
+
+                <div class="collapsible">
+                    <h3>Är du verkligen den Andreas Hellquist som jag känner</h3>
+                    <p>Det beror verkligen på vilken Andreas Hellquist du känner, men om du är lite osäker kan du prova att fråga mig i person. Ifall det då visar sig att du inte känner någon Andreas Hellquist är jag antagligen inte det. Ifall personen svarar nej är jag antagligen inte heller det (om jag inte luras). Om personen svarar ja är det antingen jag eller någon som vill anställa mig för att jag gör så snygga hemsidor.</p>
+                </div>
+
+                <div class="collapsible">
+                    <h3>Hur kontaktar jag dig</h3>
+
+                    <p>Det beror väldigt mycket på vem du är och vad du vill. För att göra det enkelt för dig har jag delat in frågan i olika kategorier:</p>
+                    <h4>Du kände mig en gång i tiden och vill prata med mig igen</h4>
+                    <p>I det här fallet är det ett mycket enkelt: ring mig. Om du känner mig sedan innan har du antagligen mitt nummer. Om du är ens lite som jag är detta otroligt läskigt eftersom du är rädd för att störa mig eller att jag inte gillar dig längre, men chansen är stor att jag faktiskt vill prata med dig.</p>
+
+                    <h4>Du har sett mig i något sammanhang, blev kär i mig, googlade mitt namn och hittade hit</h4>
+                    <p>I det här fallet är ditt bästa alternativ antagligen att gå fram till mig i person och säga det rakt ut. Jag antar att du träffar/ser mig i person ifall du har lyckats bli kär i mig. Det finns inte en chans att jag kommer upptäcka dina "tydliga" signaler, så du får bita ihop och ta kontakt.</p>
+
+                    <h4>Du träffade på min hemsida och undrar om jag kan göra en åt dig också</h4>
+                    <p>Skicka ett mail till <em>ahellqui AT gmail DOT com</em> med din förfrågan så reder vi ut detaljerna.</p>
+
+                    <h4>Hjälp mitt alternativ finns inte här</h4>
+                    <p>Prova att skriva ett mail, skicka ett sms, söka på hitta.se eller kanske starta en förening med medlemmar som övertygar mig om att jag verkligen behöver gå med i vad ni nu gör. Du löser det nog.</p>
+                </div>
+
+                <div class="collapsible">
+                    <h3>Jag älskar färgerna på sidan; vad är det för några</h3>
+                    <p>Tack så mycket, men tyvärr kan säga att det är min palett. Jag använde färgtemat <a href="https://github.com/morhetz/gruvbox">gruvbox</a> för att designa denna mycket vackra hemsida.</p>
+                </div>
+
+                <div class="collapsible">
+                    <h3>Har någon faktiskt frågat någonting av det här</h3>
+                    <p>Nej absolut inte, men detta är inte heller en faq. Som du tydligt kan se av rubriken är denna sektion enbart "Frågor" och inte "Vanliga frågor".</p>
+                </div>
+            </section>
+
+        </div>
+        <script src="js/frontpage-hamburger-menu.js"></script>
+        <script src="js/collapsible.js"></script>
+        <script src="js/addNavLinks.js"></script>
+    </body>
+</html>
