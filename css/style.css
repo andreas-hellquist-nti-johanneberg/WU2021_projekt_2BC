@@ -579,7 +579,7 @@ section#wrapper-art-gallery-images section.art-container h2 {
 
 section#wrapper-art-gallery-images section.art-container figure img {
     max-width: 100%;
-    max-height: auto;
+    height: auto;
 }
 
 div#wrapper-art-gallery section#wrapper-art-gallery-images {
