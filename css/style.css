@@ -11,13 +11,15 @@
     --gruvbox-light2:      #d5c4a1;
     --gruvbox-light3:      #bdae93;
 
-    --gruvbox-bright_green: #b8bb26;
+    /* Rip gruvbox-bright-green.. Loved by everyone except contrast checker */
+    /* --gruvbox-bright_green: #b8bb26; */
+    --bright_green: #dbff1a;
     --gruvbox-neutral_blue: #458588;
 
     --background-color1:    var(--gruvbox-dark0);
     --background-color2:    var(--gruvbox-dark1);
     --background-color3:    var(--gruvbox-dark2);
-    --top-nav-color:        var(--gruvbox-bright_green);
+    --top-nav-color:        var(--bright_green);
     --text-on-bg-color0:    var(--gruvbox-light0_soft);
     --text-on-bg-color1:    var(--gruvbox-light1);
     --text-on-bg-color2:    var(--gruvbox-light2);
@@ -640,6 +642,7 @@ div#wrapper-about section.questions {
     color: var(--text-on-bg-color0);
     font-family: sans-serif;
     padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 div#wrapper-about section.questions h2 {
@@ -686,6 +689,7 @@ div#wrapper-about section .collapsible.opened :not(:first-child) {
     div#wrapper-about nav#desktop-question-navigation {
         display: none;
     }
+
 }
 
 /* Desktop */
