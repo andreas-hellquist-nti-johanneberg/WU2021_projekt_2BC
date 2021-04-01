@@ -6,6 +6,7 @@
     --gruvbox-dark1:       #3c3836;
     --gruvbox-dark2:       #504945;
 
+    --gruvbox-light0:      #fbf1c7;
     --gruvbox-light0_soft: #f2e5bc;
     --gruvbox-light1:      #ebdbb2;
     --gruvbox-light2:      #d5c4a1;
@@ -19,7 +20,11 @@
     --background-color1:    var(--gruvbox-dark0);
     --background-color2:    var(--gruvbox-dark1);
     --background-color3:    var(--gruvbox-dark2);
+
     --top-nav-color:        var(--bright_green);
+
+    /* I added this after the others and didn't feel like renaming everything */
+    --text-on-bg-color-1:   var(--gruvbox-light0);
     --text-on-bg-color0:    var(--gruvbox-light0_soft);
     --text-on-bg-color1:    var(--gruvbox-light1);
     --text-on-bg-color2:    var(--gruvbox-light2);
@@ -81,7 +86,7 @@ section.common-section h3 {
 
 .navigation-menu section {
     background-color: var(--background-color2);
-    color: var(--text-on-bg-color0);
+    color: var(--text-on-bg-color-1);
 
     font-family: sans-serif;
 
@@ -99,7 +104,7 @@ section.common-section h3 {
     display: block;
 
     text-decoration: none;
-    color: var(--text-on-bg-color1);
+    color: var(--text-on-bg-color-1);
     margin: 0.5rem 0 0.5rem 0;
 
     padding: 8px;
@@ -178,7 +183,7 @@ section.common-section h3 {
 
         font-size: 1.5rem;
 
-        color: var(--text-on-bg-color2);
+        color: var(--text-on-bg-color1);
     }
 
     img#hamburger-menu-button {
@@ -664,6 +669,10 @@ div#wrapper-about section .collapsible :not(:first-child) {
 div#wrapper-about section .collapsible.opened :not(:first-child) {
     display: block;
     padding-left: 2rem;
+}
+
+div#wrapper-about section .collapsible.opened :not(:first-child) a {
+    color: inherit;
 }
 
 /* Mobile */
