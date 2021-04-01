@@ -141,6 +141,38 @@ section.common-section h3 {
 
 /* Mobile content common for all pages */
 @media screen and (max-width: 767px) {
+    /* Top header ------------------------ */
+    nav#top-nav-mobile {
+        position:fixed;
+
+        background-color: var(--top-nav-color);
+        width: 100%;
+        height: 10%;
+
+        display: grid;
+        grid-template-columns: 20% auto 20%;
+    }
+
+    nav#top-nav-mobile #hamburger-menu-button {
+        padding-left: 1rem;
+        padding-top: 0.8rem;
+    }
+
+    nav#top-nav-mobile a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        text-decoration: none;
+        color: black;
+        font-size: 2em;
+        font-weight: 600;
+    }
+
+    nav#top-nav-desktop {
+        display: none;
+    }
+
     div.fade-layer {
         position: fixed;
         top: 0;
@@ -179,6 +211,10 @@ section.common-section h3 {
         font-size: 1.5rem;
 
         color: var(--text-on-bg-color2);
+    }
+
+    img#hamburger-menu-button {
+
     }
 
     nav#mobile-hamburger-menu {
@@ -262,34 +298,6 @@ div#wrapper-front-first-page header {
 
 /* Mobile */
 @media screen and (max-width: 767px) {
-    /* Top header ------------------------ */
-    nav#top-nav-mobile {
-        position:fixed;
-
-        background-color: var(--top-nav-color);
-        width: 100%;
-        height: 10%;
-    }
-
-    /* Det här känns verkligen inte snyggt, men det får duga till vidare */
-    nav#top-nav-mobile a {
-        position: absolute;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-        text-align: center;
-
-        text-decoration: none;
-        color: black;
-        font-size: 2em;
-        font-weight: 600;
-    }
-
-    nav#top-nav-desktop {
-        display: none;
-    }
-
     div#wrapper-front-first-page {
         display: grid;
         height: 100vh;

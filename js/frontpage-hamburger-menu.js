@@ -6,7 +6,7 @@ const toggleHamburgerMenu = () => {
     document.querySelector ("body").classList.toggle ("stop-scroll");
 }
 
-document.querySelector ("nav#top-nav-mobile div#hamburger-menu-button").addEventListener ("click", toggleHamburgerMenu);
+document.querySelector ("nav#top-nav-mobile #hamburger-menu-button").addEventListener ("click", toggleHamburgerMenu);
 // If the user clicks on one of the links the menu should obviously hide
 document.querySelector ("nav#mobile-hamburger-menu").addEventListener ("click", toggleHamburgerMenu);
 // If the user clicks outside of the menu it should hide
