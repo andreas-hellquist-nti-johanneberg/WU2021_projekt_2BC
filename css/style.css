@@ -307,7 +307,8 @@ div#wrapper-front-first-page header {
         align-items: center;
     }
 
-    nav#top-nav-desktop a, nav#top-nav-desktop span {
+    nav#top-nav-desktop a,
+    nav#top-nav-desktop span {
         text-decoration: none;
         color: black;
         font-size: 2em;
