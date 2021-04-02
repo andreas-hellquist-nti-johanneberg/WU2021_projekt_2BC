@@ -62,7 +62,7 @@ insertNavLinks = (linkData, parentElem) => {
 
 const pageName = window.location.pathname;
 
-// Yes it is a little bit slower to load the links on mobile and desktop, but it's easier for me to test.
+// Yes it is a little bit slower to load the links on mobile and desktop, but it's easier for me.
 // The script will only run once upon loading anyways, so it doesn't really matter.
 switch (pageName) {
     case "/art-gallery.html":
@@ -74,6 +74,4 @@ switch (pageName) {
         insertNavLinks (getCollapsibleLinkData (), document.getElementById ("navigate-page-desktop"));
         insertNavLinks (getCollapsibleLinkData (), document.getElementById ("navigate-page-mobile"));
         break;
-
-
 }
