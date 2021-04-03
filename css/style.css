@@ -654,6 +654,10 @@ div#wrapper-about section.questions h2 {
     text-align: center;
 }
 
+div#wrapper-about section .collapsible {
+    cursor: pointer;
+}
+
 div#wrapper-about section .collapsible > :first-child::before {
     content: "▶ ";
 }
